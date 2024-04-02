@@ -19,8 +19,6 @@
 
     <script>
         const select=document.querySelector('#select')
-       
-
         function handleChange(){
             if(select.value!=='elegirTematica'){
                 select.classList.replace('bg-slate-200','bg-black')
@@ -30,9 +28,12 @@
                 select.classList.replace('text-white','text-black')
             }
         }
- 
-        
-        select.addEventListener('change', handleChange)
+        function handlerClick(event){
+            select.classList.replace('bg-black','bg-slate-200')
+            select.classList.replace('text-white','text-black')
+        }
+        select.addEventListener('change', handlerChange)
+        select.addEventListener('mousedown', handlerClick)
         
         
                 
