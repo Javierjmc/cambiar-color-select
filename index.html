@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-600 h-screen flex justify-center items-center">
 
+    <select id="select" name="select" class="p-1 bg-slate-200 text-black">
+        <option value="elegirTematica" selected>Elegir tematica</option>
+        <option value="miPrimeraChanba">Mi primera chamba</option>
+        <option value="ambienteSostenibilidad">Ambiente y sostenibilidad</option>
+        <option value="turismoCultura">Turismo y cultura</option>
+        <option value="educacion">Educación</option>
+        <option value="saludMedicamentosNutrición">Salud, medicamentos y nutrición</option>
+    </select>
+
+    <script>
+        const select=document.querySelector('#select')
+        console.log(select.value) //elegirTematica
+
+        function handleChange(){
+                if(select.value!=='elegirTematica'){
+                    select.classList.replace('bg-slate-200','bg-black')
+                    select.classList.replace('text-black','text-white')
+                }else{
+                    select.classList.replace('bg-black','bg-slate-200')
+                    select.classList.replace('text-white','text-black')
+                }
+            
+            }   
+
+
+
+        function handleClick(event){
+                    
+            event.target.addEventListener('change', handleChange)
+            
+        }
+
+        select.addEventListener('click', handleClick)
+                
+    </script>
+    
+</body>
+</html>
