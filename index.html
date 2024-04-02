@@ -19,28 +19,22 @@
 
     <script>
         const select=document.querySelector('#select')
-        console.log(select.value) //elegirTematica
+       
 
         function handleChange(){
-                if(select.value!=='elegirTematica'){
-                    select.classList.replace('bg-slate-200','bg-black')
-                    select.classList.replace('text-black','text-white')
-                }else{
-                    select.classList.replace('bg-black','bg-slate-200')
-                    select.classList.replace('text-white','text-black')
-                }
-            
-            }   
-
-
-
-        function handleClick(event){
-                    
-            event.target.addEventListener('change', handleChange)
-            
+            if(select.value!=='elegirTematica'){
+                select.classList.replace('bg-slate-200','bg-black')
+                select.classList.replace('text-black','text-white')
+            }else{
+                select.classList.replace('bg-black','bg-slate-200')
+                select.classList.replace('text-white','text-black')
+            }
         }
-
-        select.addEventListener('click', handleClick)
+ 
+        
+        select.addEventListener('change', handleChange)
+        
+        
                 
     </script>
     
